@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+.DS_Store
+CLAUDE.md
+.claude/
+.vscode/
+.coverage
+htmlcov/
+.ruff_cache/

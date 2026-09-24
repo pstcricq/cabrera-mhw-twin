@@ -1,0 +1,33 @@
+[project]
+name = "cabrera-twin"
+version = "0.1.0"
+description = "Marine heatwave indicators for the Cabrera National Park MPA (Balearic Islands) - a Digital Twin Ocean building block"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Pierre St-Cricq dit Lompre" }]
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "pytest>=8",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+force-exclude = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
