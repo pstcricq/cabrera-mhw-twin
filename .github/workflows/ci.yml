@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: make lint
+      - run: make test
+      # Rebuilds the indicators from the committed processed series and fails if they differ
+      - run: make build && git diff --exit-code -- data/exports ':!data/exports/meta.json'
+
