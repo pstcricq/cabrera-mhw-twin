@@ -1,0 +1,102 @@
+{
+  "type": "Collection",
+  "id": "cabrera-mhw",
+  "stac_version": "1.1.0",
+  "description": "Harmonised series and derived heatwave indicators.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    },
+    {
+      "rel": "license",
+      "href": "https://marine.copernicus.eu/user-corner/service-commitments-and-licence",
+      "title": "Copernicus Marine Service licence"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "SOCIB data, CC BY 4.0"
+    },
+    {
+      "rel": "license",
+      "href": "https://opendatacommons.org/licenses/odbl/",
+      "title": "MPA boundary from OpenStreetMap, ODbL"
+    },
+    {
+      "rel": "item",
+      "href": "./satellite-sst/satellite-sst.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./socib-station-cabrera/socib-station-cabrera.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./heatwave-indicators/heatwave-indicators.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          2.75,
+          38.85,
+          3.45,
+          39.35
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1982-01-01T00:00:00Z",
+          "2026-09-23T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "marine heatwave",
+    "sea surface temperature",
+    "marine protected area",
+    "Balearic Islands",
+    "digital twin ocean"
+  ],
+  "providers": [
+    {
+      "name": "E.U. Copernicus Marine Service",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://marine.copernicus.eu"
+    },
+    {
+      "name": "SOCIB",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://www.socib.es"
+    },
+    {
+      "name": "Pierre St-Cricq dit Lompre",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/pstcricq/cabrera-mhw-twin"
+    }
+  ]
+}

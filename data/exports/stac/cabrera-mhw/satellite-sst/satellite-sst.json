@@ -1,0 +1,81 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "satellite-sst",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.75,
+          38.85
+        ],
+        [
+          3.45,
+          38.85
+        ],
+        [
+          3.45,
+          39.35
+        ],
+        [
+          2.75,
+          39.35
+        ],
+        [
+          2.75,
+          38.85
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    2.75,
+    38.85,
+    3.45,
+    39.35
+  ],
+  "properties": {
+    "title": "Daily satellite SST over the MPA box",
+    "description": "Copernicus Marine Service: cmems_SST_MED_SST_L4_REP_OBSERVATIONS_010_021 until 2026-08-24, then SST_MED_SST_L4_NRT_OBSERVATIONS_010_004_a_V2 regridded and debiased",
+    "start_datetime": "1982-01-01T00:00:00Z",
+    "end_datetime": "2026-09-23T00:00:00Z",
+    "license": "other",
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://marine.copernicus.eu/user-corner/service-commitments-and-licence",
+      "title": "Copernicus Marine Service licence"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../../processed/sst_cabrera_daily.zarr",
+      "type": "application/vnd+zarr",
+      "title": "Zarr store, daily, 0.05 degrees, appended as new days arrive",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "collection": "cabrera-mhw"
+}

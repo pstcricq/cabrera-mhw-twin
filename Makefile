@@ -1,7 +1,7 @@
 # Makefile: shortcuts for the common project commands.
 # Usage: make <target>   (e.g. make lint)
 
-.PHONY: help install hooks fmt lint test check clean
+.PHONY: help install hooks fmt lint test check data update build clean
 
 help:  ## List the available targets
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk -F':.*?## ' '{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -24,6 +24,15 @@ test:  ## Run the tests with the coverage report
 	uv run pytest --cov=cabrera_twin --cov-report=term-missing
 
 check: lint test  ## Checks to run before committing
+
+data:  ## Download and harmonise the sources (needs copernicusmarine login)
+	uv run cabrera-twin fetch
+
+update:  ## Append the days published since the last run, then rebuild
+	uv run cabrera-twin update
+
+build:  ## Compute the indicators into data/exports
+	uv run cabrera-twin build
 
 clean:  ## Remove caches and temporary files
 	rm -rf .ruff_cache .pytest_cache .coverage htmlcov

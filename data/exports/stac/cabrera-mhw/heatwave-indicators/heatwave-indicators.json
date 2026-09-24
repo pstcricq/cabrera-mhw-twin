@@ -1,0 +1,131 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "heatwave-indicators",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.75,
+          38.85
+        ],
+        [
+          3.45,
+          38.85
+        ],
+        [
+          3.45,
+          39.35
+        ],
+        [
+          2.75,
+          39.35
+        ],
+        [
+          2.75,
+          38.85
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    2.75,
+    38.85,
+    3.45,
+    39.35
+  ],
+  "properties": {
+    "title": "Marine heatwave indicators and what-if scenarios",
+    "description": "Detection with Hobday et al. (2016, 2018), 1991-2020 baseline, 90th percentile threshold. Scenarios: 0, 0.5, 1, 1.5, 2 degrees Celsius.",
+    "start_datetime": "1982-01-01T00:00:00Z",
+    "end_datetime": "2026-09-23T00:00:00Z",
+    "license": "other",
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://marine.copernicus.eu/user-corner/service-commitments-and-licence",
+      "title": "Copernicus Marine Service licence"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "SOCIB data, CC BY 4.0"
+    },
+    {
+      "rel": "license",
+      "href": "https://opendatacommons.org/licenses/odbl/",
+      "title": "MPA boundary from OpenStreetMap, ODbL"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "meta": {
+      "href": "../../../meta.json",
+      "type": "application/json",
+      "title": "Provenance, method parameters and current status",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "daily": {
+      "href": "../../../parquet/daily.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "daily table, queried by the API with SQL",
+      "roles": [
+        "data"
+      ]
+    },
+    "yearly": {
+      "href": "../../../parquet/yearly.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "yearly table, queried by the API with SQL",
+      "roles": [
+        "data"
+      ]
+    },
+    "events": {
+      "href": "../../../parquet/events.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "events table, queried by the API with SQL",
+      "roles": [
+        "data"
+      ]
+    },
+    "pixels": {
+      "href": "../../../parquet/pixels.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "pixels table, queried by the API with SQL",
+      "roles": [
+        "data"
+      ]
+    },
+    "validation": {
+      "href": "../../../parquet/validation.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "validation table, queried by the API with SQL",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "collection": "cabrera-mhw"
+}

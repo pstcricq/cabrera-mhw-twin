@@ -1,0 +1,81 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "socib-station-cabrera",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.75,
+          38.85
+        ],
+        [
+          3.45,
+          38.85
+        ],
+        [
+          3.45,
+          39.35
+        ],
+        [
+          2.75,
+          39.35
+        ],
+        [
+          2.75,
+          38.85
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    2.75,
+    38.85,
+    3.45,
+    39.35
+  ],
+  "properties": {
+    "title": "SOCIB Station Cabrera daily temperature",
+    "description": "Daily means at 1, 13 and 16.7 m, QC flags 1-2, validating the satellite.",
+    "start_datetime": "2025-07-11T00:00:00Z",
+    "end_datetime": "2026-09-23T00:00:00Z",
+    "license": "CC-BY-4.0",
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "SOCIB data, CC BY 4.0"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../../processed/socib_cabrera_daily.nc",
+      "type": "application/netcdf",
+      "title": "CF NetCDF, daily means per depth",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "collection": "cabrera-mhw"
+}

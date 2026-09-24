@@ -12,6 +12,8 @@ dependencies = [
     "netcdf4>=1.7",
     "numpy>=2.0",
     "pandas>=2.2",
+    "pyarrow>=25.0.1",
+    "pystac>=1.15.2",
     "requests>=2.32",
     "scipy>=1.18.1",
     "shapely>=2.0",
@@ -19,9 +21,13 @@ dependencies = [
     "zarr>=3.4.0",
 ]
 
+[project.scripts]
+cabrera-twin = "cabrera_twin.cli:main"
+
 [dependency-groups]
 dev = [
     "pre-commit>=4.6.2",
+    "pystac[validation]>=1.15.2",
     "pytest>=8",
     "pytest-cov>=7.1.0",
     "ruff>=0.16.8",

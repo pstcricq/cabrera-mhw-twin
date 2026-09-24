@@ -1,0 +1,20 @@
+{
+  "type": "Catalog",
+  "id": "cabrera-mhw-twin",
+  "stac_version": "1.1.0",
+  "description": "Daily satellite sea surface temperature, in-situ temperature from the SOCIB Station Cabrera, and marine heatwave indicators (Hobday et al., 2016, 2018) for the Cabrera Archipelago National Park.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "Marine heatwaves in the Cabrera National Park"
+    },
+    {
+      "rel": "child",
+      "href": "./cabrera-mhw/collection.json",
+      "type": "application/json"
+    }
+  ],
+  "title": "Marine heatwaves in the Cabrera National Park"
+}
