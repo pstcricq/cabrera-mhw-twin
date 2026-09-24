@@ -9,6 +9,8 @@ authors = [{ name = "Pierre St-Cricq dit Lompre" }]
 dependencies = [
     "bottleneck>=1.6.0",
     "copernicusmarine>=2.4",
+    "duckdb>=1.5.5",
+    "fastapi>=0.141.1",
     "netcdf4>=1.7",
     "numpy>=2.0",
     "pandas>=2.2",
@@ -17,6 +19,7 @@ dependencies = [
     "requests>=2.32",
     "scipy>=1.18.1",
     "shapely>=2.0",
+    "uvicorn[standard]>=0.53.0",
     "xarray>=2024.10",
     "zarr>=3.4.0",
 ]
@@ -26,6 +29,7 @@ cabrera-twin = "cabrera_twin.cli:main"
 
 [dependency-groups]
 dev = [
+    "httpx2>=2.13.1",
     "pre-commit>=4.6.2",
     "pystac[validation]>=1.15.2",
     "pytest>=8",
