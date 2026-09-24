@@ -11,3 +11,5 @@ CLAUDE.md
 htmlcov/
 .ruff_cache/
 *.tmp.zarr/
+# MkDocs output
+site/

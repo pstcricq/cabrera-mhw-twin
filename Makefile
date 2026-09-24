@@ -1,7 +1,7 @@
 # Makefile: shortcuts for the common project commands.
 # Usage: make <target>   (e.g. make lint)
 
-.PHONY: help install hooks fmt lint test check data update build api dashboard up down clean
+.PHONY: help install hooks fmt lint test check data update build api dashboard docs up down clean
 
 help:  ## List the available targets
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) | awk -F':.*?## ' '{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -39,6 +39,9 @@ api:  ## Run the HTTP API on http://localhost:8000 (docs at /docs)
 
 dashboard:  ## Run the Streamlit dashboard on http://localhost:8501
 	uv run streamlit run dashboard/streamlit_app.py
+
+docs:  ## Preview the documentation on http://localhost:8001
+	uv run --group docs mkdocs serve -a localhost:8001
 
 up:  ## Build and run the API and the dashboard with Docker
 	docker compose up --build
