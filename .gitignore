@@ -10,3 +10,4 @@ CLAUDE.md
 .coverage
 htmlcov/
 .ruff_cache/
+*.tmp.zarr/

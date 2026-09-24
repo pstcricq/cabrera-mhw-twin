@@ -7,6 +7,16 @@ requires-python = ">=3.12"
 license = "MIT"
 authors = [{ name = "Pierre St-Cricq dit Lompre" }]
 dependencies = [
+    "bottleneck>=1.6.0",
+    "copernicusmarine>=2.4",
+    "netcdf4>=1.7",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "requests>=2.32",
+    "scipy>=1.18.1",
+    "shapely>=2.0",
+    "xarray>=2024.10",
+    "zarr>=3.4.0",
 ]
 
 [dependency-groups]
@@ -23,6 +33,10 @@ build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Raised inside xarray's netCDF4 writer (xarray 2026.7), not by this code
+filterwarnings = [
+    "ignore:Setting the shape on a NumPy array:DeprecationWarning:xarray.backends.netCDF4_",
+]
 
 [tool.ruff]
 line-length = 88
